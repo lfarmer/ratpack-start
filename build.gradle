@@ -9,6 +9,9 @@ repositories {
 }
 
 dependencies {
+    compile ratpack.dependency('hikari')
+    compile 'org.jooq:jooq:3.13.2'
+    compile 'com.h2database:h2:1.4.200'
     testCompile 'junit:junit:4.11'
     testCompile 'org.assertj:assertj-core:3.11.1'
     runtime "org.slf4j:slf4j-simple:1.7.21"
@@ -25,7 +28,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.ratpack:ratpack-gradle:1.8.0"
+        classpath 'io.ratpack:ratpack-gradle:1.8.0'
+        classpath 'org.jooq:jooq-codegen:3.13.2'
+        classpath 'com.h2database:h2:1.4.200'
     }
 }
 
